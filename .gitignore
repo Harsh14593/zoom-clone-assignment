@@ -1,0 +1,9 @@
+backend/zoom_clone.db
+backend/app/__pycache__/
+backend/.venv/
+frontend/.next/
+frontend/node_modules/
+frontend/.env.local
+frontend/tsconfig.tsbuildinfo
+*.pyc
+
