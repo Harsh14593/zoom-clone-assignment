@@ -73,6 +73,8 @@ The backend and frontend are deployed separately.
 
 Render's default filesystem is ephemeral, so `zoom_clone.db` resets (re-seeds) on every redeploy/restart — expected for this assignment.
 
+`backend/.python-version` pins the runtime to 3.11.9 — Render's default (3.14 at time of writing) doesn't yet have a prebuilt `pydantic-core` wheel and fails to build from source.
+
 ### Frontend (Vercel)
 
 1. Import this repo on Vercel with **Root Directory** set to `frontend`.
@@ -84,8 +86,10 @@ Render's default filesystem is ephemeral, so `zoom_clone.db` resets (re-seeds) o
 3. Deploy. Vercel auto-detects the Next.js build.
 
 Live links:
-- Frontend: _TBD_
-- Backend: _TBD_
+- Frontend: https://zoom-clone-assignment-eta.vercel.app
+- Backend: https://zoom-clone-assignment-vsfr.onrender.com
+
+Note: the backend is on Render's free tier, so it spins down after ~15 minutes of inactivity — the first request after idling can take 30-50 seconds to wake up.
 
 ## Real-Time Meeting Flow
 
